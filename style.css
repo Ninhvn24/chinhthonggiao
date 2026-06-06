@@ -163,6 +163,21 @@ a {
 
 /* CONTENT / TABLE OF CONTENTS */
 
+.toc-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.toc-wrapper > h2 {
+  margin-bottom: 20px;
+}
+
+.toc-wrapper > .lead {
+  margin: 0 0 36px;
+  font-size: 1.35rem;
+  color: #4f3728;
+}
+
 .chapter-block {
   max-width: 980px;
   margin: 0 auto;
@@ -222,7 +237,9 @@ a {
   gap: 24px;
   align-items: center;
   border-top: 1px solid var(--border);
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .lesson-link:hover {

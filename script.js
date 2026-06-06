@@ -1,1 +1,13 @@
-document.querySelectorAll(".chapter-block").forEach(block=>{block.querySelector(".chapter-toggle").addEventListener("click",()=>block.classList.toggle("open"));});
+const accordions = document.querySelectorAll(".chapter-toggle");
+
+accordions.forEach((button) => {
+  button.addEventListener("click", () => {
+    const panel = button.nextElementSibling;
+
+    if (panel.style.display === "none") {
+      panel.style.display = "block";
+    } else {
+      panel.style.display = "none";
+    }
+  });
+});
