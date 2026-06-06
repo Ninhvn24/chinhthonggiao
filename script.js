@@ -1,6 +1,1 @@
-
-document.querySelectorAll('.chapter-button').forEach(button => {
-  button.addEventListener('click', () => {
-    button.closest('.chapter-card').classList.toggle('open');
-  });
-});
+document.querySelectorAll(".chapter-block").forEach(block=>{block.querySelector(".chapter-toggle").addEventListener("click",()=>block.classList.toggle("open"));});
