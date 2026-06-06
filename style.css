@@ -1,12 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif:wght@400;500;600;700&display=swap");
+
 :root {
-  --bg: #f4ecdf;
-  --paper: #fffaf2;
-  --ink: #24140d;
-  --muted: #7a604b;
-  --brown: #5a341f;
-  --brown-dark: #2b160d;
-  --gold: #d2a755;
-  --border: #d9bd8f;
+  --bg: #efe6d7;
+  --paper: #fffaf1;
+  --paper-soft: #f8efdf;
+  --ink: #21130d;
+  --muted: #765d48;
+  --brown: #5b341f;
+  --brown-dark: #1d0d07;
+  --brown-mid: #70432a;
+  --gold: #c99b46;
+  --gold-soft: #ead29a;
+  --border: #d6b783;
 }
 
 * {
@@ -19,13 +24,13 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(circle at top, rgba(255, 250, 240, 0.95), transparent 35%),
-    var(--bg);
   color: var(--ink);
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
-  line-height: 1.75;
+  background:
+    radial-gradient(circle at top center, rgba(255, 250, 239, 0.95), transparent 34%),
+    linear-gradient(180deg, #f6efe4 0%, #eadfce 100%);
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 19px;
+  line-height: 1.8;
 }
 
 a {
@@ -39,36 +44,58 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 250, 242, 0.94);
+  background: rgba(255, 250, 241, 0.94);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(10px);
 }
 
 .nav {
-  max-width: 1160px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 18px 28px;
+  padding: 18px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .brand {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.35rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.55rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+  color: #2a170f;
 }
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 30px;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 1rem;
+}
+
+.nav-links a {
+  position: relative;
+  padding-bottom: 4px;
 }
 
 .nav-links a:hover {
   color: var(--ink);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.2s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 /* HERO */
@@ -79,10 +106,11 @@ a {
   place-items: center;
   text-align: center;
   padding: 90px 28px;
-  color: #fff8ec;
+  color: #fff8eb;
   background:
-    linear-gradient(rgba(28, 12, 6, 0.82), rgba(28, 12, 6, 0.88)),
-    radial-gradient(circle at center, #6b3f25, #1e0f08);
+    linear-gradient(rgba(25, 9, 4, 0.84), rgba(25, 9, 4, 0.9)),
+    radial-gradient(circle at center, #754729 0%, #32170c 48%, #170804 100%);
+  border-bottom: 1px solid #3a1c0e;
 }
 
 .hero-inner {
@@ -90,75 +118,79 @@ a {
 }
 
 .kicker {
-  color: #e8bd66;
-  font-size: 1rem;
+  color: #e5bd69;
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 0.92rem;
   font-weight: 700;
-  letter-spacing: 0.38em;
+  letter-spacing: 0.42em;
   text-transform: uppercase;
 }
 
 .hero h1 {
-  margin: 18px 0 22px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(4.2rem, 10vw, 8.6rem);
-  line-height: 0.95;
+  margin: 16px 0 22px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4.8rem, 11vw, 9rem);
+  line-height: 0.86;
   font-weight: 700;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.055em;
 }
 
 .hero p {
-  max-width: 850px;
+  max-width: 860px;
   margin: 0 auto;
-  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: clamp(1.25rem, 1.9vw, 1.65rem);
   font-weight: 600;
-  line-height: 1.45;
+  line-height: 1.55;
 }
 
 /* SECTIONS */
 
 .section {
-  padding: 90px 28px;
+  padding: 88px 28px;
 }
 
 .paper {
   max-width: 980px;
   margin: 0 auto;
-  padding: clamp(34px, 6vw, 72px);
-  background: rgba(255, 250, 242, 0.9);
+  padding: clamp(38px, 6vw, 72px);
+  background: rgba(255, 250, 241, 0.92);
   border: 1px solid var(--border);
-  border-radius: 28px;
-  box-shadow: 0 28px 70px rgba(72, 45, 25, 0.16);
+  border-radius: 22px;
+  box-shadow: 0 24px 64px rgba(62, 36, 19, 0.14);
 }
 
 .paper h2,
 .section h2,
 #noi-dung h2 {
   margin: 0 0 28px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(3rem, 6vw, 5.2rem);
-  line-height: 1;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.2rem, 6vw, 5.2rem);
+  line-height: 0.95;
   font-weight: 700;
-  letter-spacing: -0.04em;
-  color: var(--ink);
+  letter-spacing: -0.035em;
+  color: #24120b;
 }
 
 .paper p {
   margin: 0 0 26px;
-  font-size: 1.32rem;
+  font-size: 1.12rem;
+  line-height: 1.9;
 }
 
 .paper .lead {
-  font-size: 1.32rem;
-  line-height: 1.75;
+  font-size: 1.14rem;
+  line-height: 1.9;
 }
 
 .note {
-  margin-top: 30px;
+  margin-top: 34px;
   padding: 24px 28px;
-  background: #fbefd9;
-  border-left: 6px solid var(--gold);
-  border-radius: 18px;
-  font-size: 1.25rem;
+  background: #fbefd8;
+  border-left: 5px solid var(--gold);
+  border-radius: 14px;
+  font-size: 1.08rem;
+  line-height: 1.85;
 }
 
 /* CONTENT / TABLE OF CONTENTS */
@@ -169,60 +201,71 @@ a {
 }
 
 .toc-wrapper > h2 {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .toc-wrapper > .lead {
   margin: 0 0 36px;
-  font-size: 1.35rem;
-  color: #4f3728;
+  max-width: 760px;
+  color: #513827;
+  font-size: 1.14rem;
+  line-height: 1.85;
 }
 
 .chapter-block {
   max-width: 980px;
   margin: 0 auto;
   overflow: hidden;
-  background: rgba(255, 250, 242, 0.94);
+  background: rgba(255, 250, 241, 0.95);
   border: 1px solid var(--border);
-  border-radius: 28px;
-  box-shadow: 0 28px 70px rgba(72, 45, 25, 0.16);
+  border-radius: 22px;
+  box-shadow: 0 24px 64px rgba(62, 36, 19, 0.14);
 }
 
 .chapter-toggle {
   width: 100%;
-  padding: 34px 42px;
+  padding: 32px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #7a4a2f, #57301c);
-  color: #fff7eb;
+  background:
+    linear-gradient(135deg, rgba(120, 73, 44, 0.98), rgba(78, 42, 24, 0.98));
+  color: #fff8eb;
   border: 0;
   cursor: pointer;
   text-align: left;
 }
 
+.chapter-toggle:hover {
+  background:
+    linear-gradient(135deg, rgba(129, 80, 49, 0.98), rgba(86, 48, 29, 0.98));
+}
+
 .chapter-title {
   display: block;
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.25rem, 4vw, 3.45rem);
   font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  line-height: 1;
+  letter-spacing: -0.025em;
 }
 
 .chapter-subtitle {
   margin-top: 10px;
   display: block;
-  color: #f3cf8a;
-  font-size: 1rem;
+  color: #f2d08c;
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 0.86rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
 .chevron {
-  font-size: 2rem;
+  font-family: "Noto Serif", Georgia, serif;
+  font-size: 1.8rem;
   font-weight: 700;
+  color: #fff1d2;
 }
 
 .chapter-panel {
@@ -230,53 +273,56 @@ a {
 }
 
 .lesson-link {
-  min-height: 110px;
-  padding: 26px 42px 26px 34px;
+  min-height: 106px;
+  padding: 25px 40px 25px 34px;
   display: grid;
-  grid-template-columns: 58px 1fr 34px;
+  grid-template-columns: 54px 1fr 34px;
   gap: 24px;
   align-items: center;
   border-top: 1px solid var(--border);
   transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+    background 0.18s ease,
+    transform 0.18s ease;
 }
 
 .lesson-link:hover {
-  background: #fbefd9;
-  transform: translateX(4px);
+  background: #fbefd8;
+  transform: translateX(3px);
 }
 
 .lesson-number {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   display: grid;
   place-items: center;
   border-radius: 999px;
-  background: #efd49a;
-  color: #5c351e;
+  background: var(--gold-soft);
+  color: #54301b;
+  font-family: "Noto Serif", Georgia, serif;
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
 }
 
 .lesson-title {
   display: block;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 1.55rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.65rem;
   font-weight: 700;
-  line-height: 1.25;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  color: #1f1009;
 }
 
 .lesson-meta {
   display: block;
-  margin-top: 4px;
+  margin-top: 5px;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 0.96rem;
 }
 
 .arrow {
-  color: #9f6a32;
-  font-size: 1.6rem;
+  color: #9b642e;
+  font-size: 1.45rem;
 }
 
 /* CONTENT PAGES */
@@ -288,24 +334,26 @@ a {
 }
 
 .content-page article {
-  background: rgba(255, 250, 242, 0.92);
+  background: rgba(255, 250, 241, 0.94);
   border: 1px solid var(--border);
-  border-radius: 26px;
-  padding: clamp(34px, 6vw, 70px);
-  box-shadow: 0 28px 70px rgba(72, 45, 25, 0.14);
+  border-radius: 22px;
+  padding: clamp(38px, 6vw, 70px);
+  box-shadow: 0 24px 64px rgba(62, 36, 19, 0.14);
 }
 
 .content-page h1 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: clamp(3rem, 6vw, 5.2rem);
-  line-height: 1;
-  letter-spacing: -0.04em;
   margin: 0 0 34px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.2rem, 6vw, 5.4rem);
+  line-height: 0.96;
+  font-weight: 700;
+  letter-spacing: -0.035em;
 }
 
 .content-page p {
-  font-size: 1.28rem;
   margin: 0 0 24px;
+  font-size: 1.08rem;
+  line-height: 1.9;
 }
 
 .back-link {
@@ -322,7 +370,7 @@ a {
 
 @media (max-width: 720px) {
   body {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .nav {
@@ -330,35 +378,44 @@ a {
   }
 
   .brand {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 
   .nav-links {
     gap: 16px;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
   }
 
   .hero {
-    min-height: 460px;
+    min-height: 440px;
     padding: 70px 20px;
   }
 
   .hero h1 {
-    font-size: clamp(3.4rem, 16vw, 5.5rem);
+    font-size: clamp(3.5rem, 16vw, 5.6rem);
+  }
+
+  .hero p {
+    font-size: 1.14rem;
   }
 
   .section {
-    padding: 54px 18px;
+    padding: 56px 18px;
   }
 
   .paper {
-    padding: 32px 24px;
-    border-radius: 22px;
+    padding: 34px 24px;
+    border-radius: 18px;
   }
 
   .paper p,
   .paper .lead {
-    font-size: 1.18rem;
+    font-size: 1.02rem;
+  }
+
+  .note {
+    font-size: 1rem;
+    padding: 20px 22px;
   }
 
   .chapter-toggle {
@@ -366,21 +423,21 @@ a {
   }
 
   .lesson-link {
-    grid-template-columns: 44px 1fr 24px;
+    grid-template-columns: 42px 1fr 24px;
     gap: 16px;
     padding: 22px 20px;
   }
 
   .lesson-number {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
 
   .lesson-title {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
   }
 
   .lesson-meta {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
