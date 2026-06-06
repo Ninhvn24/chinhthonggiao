@@ -1,17 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Serif:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&display=swap");
 
 :root {
-  --bg: #efe6d7;
+  --bg: #efe6d8;
   --paper: #fffaf1;
   --paper-soft: #f8efdf;
-  --ink: #21130d;
-  --muted: #765d48;
-  --brown: #5b341f;
-  --brown-dark: #1d0d07;
-  --brown-mid: #70432a;
+  --ink: #22140d;
+  --muted: #705741;
+  --brown: #5f3822;
+  --brown-dark: #1f0d06;
+  --brown-mid: #76482c;
   --gold: #c99b46;
-  --gold-soft: #ead29a;
-  --border: #d6b783;
+  --gold-soft: #ecd39b;
+  --border: #d5b887;
 }
 
 * {
@@ -26,10 +26,10 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at top center, rgba(255, 250, 239, 0.95), transparent 34%),
-    linear-gradient(180deg, #f6efe4 0%, #eadfce 100%);
-  font-family: "Noto Serif", Georgia, serif;
-  font-size: 19px;
+    radial-gradient(circle at top center, rgba(255, 250, 239, 0.95), transparent 32%),
+    linear-gradient(180deg, #f7efe3 0%, #eadfce 100%);
+  font-family: "Noto Serif", Georgia, "Times New Roman", serif;
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -44,25 +44,24 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 250, 241, 0.94);
+  background: rgba(255, 250, 241, 0.96);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(10px);
 }
 
 .nav {
-  max-width: 1180px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 18px 30px;
+  padding: 17px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .brand {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.55rem;
+  font-size: 1.32rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: #2a170f;
 }
 
@@ -70,7 +69,6 @@ a {
   display: flex;
   gap: 30px;
   color: var(--muted);
-  font-family: "Noto Serif", Georgia, serif;
   font-size: 1rem;
 }
 
@@ -101,99 +99,95 @@ a {
 /* HERO */
 
 .hero {
-  min-height: 520px;
+  min-height: 500px;
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 90px 28px;
+  padding: 86px 28px;
   color: #fff8eb;
   background:
-    linear-gradient(rgba(25, 9, 4, 0.84), rgba(25, 9, 4, 0.9)),
-    radial-gradient(circle at center, #754729 0%, #32170c 48%, #170804 100%);
+    linear-gradient(rgba(28, 10, 4, 0.86), rgba(28, 10, 4, 0.92)),
+    radial-gradient(circle at center, #704225 0%, #32170c 48%, #170804 100%);
   border-bottom: 1px solid #3a1c0e;
 }
 
 .hero-inner {
-  max-width: 1100px;
+  max-width: 1060px;
 }
 
 .kicker {
-  color: #e5bd69;
-  font-family: "Noto Serif", Georgia, serif;
-  font-size: 0.92rem;
+  color: #e6bd67;
+  font-size: 0.88rem;
   font-weight: 700;
-  letter-spacing: 0.42em;
+  letter-spacing: 0.36em;
   text-transform: uppercase;
 }
 
 .hero h1 {
-  margin: 16px 0 22px;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(4.8rem, 11vw, 9rem);
-  line-height: 0.86;
+  margin: 18px 0 24px;
+  font-size: clamp(4rem, 9vw, 7.6rem);
+  line-height: 0.98;
   font-weight: 700;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.035em;
 }
 
 .hero p {
-  max-width: 860px;
+  max-width: 830px;
   margin: 0 auto;
-  font-family: "Noto Serif", Georgia, serif;
-  font-size: clamp(1.25rem, 1.9vw, 1.65rem);
+  font-size: clamp(1.18rem, 1.8vw, 1.48rem);
   font-weight: 600;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 /* SECTIONS */
 
 .section {
-  padding: 88px 28px;
+  padding: 84px 28px;
 }
 
 .paper {
   max-width: 980px;
   margin: 0 auto;
-  padding: clamp(38px, 6vw, 72px);
-  background: rgba(255, 250, 241, 0.92);
+  padding: clamp(38px, 6vw, 70px);
+  background: rgba(255, 250, 241, 0.94);
   border: 1px solid var(--border);
-  border-radius: 22px;
-  box-shadow: 0 24px 64px rgba(62, 36, 19, 0.14);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(62, 36, 19, 0.13);
 }
 
 .paper h2,
 .section h2,
 #noi-dung h2 {
   margin: 0 0 28px;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(3.2rem, 6vw, 5.2rem);
-  line-height: 0.95;
-  font-weight: 700;
-  letter-spacing: -0.035em;
   color: #24120b;
+  font-size: clamp(2.7rem, 5vw, 4.4rem);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 
 .paper p {
   margin: 0 0 26px;
-  font-size: 1.12rem;
+  font-size: 1.08rem;
   line-height: 1.9;
 }
 
 .paper .lead {
-  font-size: 1.14rem;
+  font-size: 1.1rem;
   line-height: 1.9;
 }
 
 .note {
   margin-top: 34px;
-  padding: 24px 28px;
+  padding: 23px 28px;
   background: #fbefd8;
   border-left: 5px solid var(--gold);
   border-radius: 14px;
-  font-size: 1.08rem;
+  font-size: 1.05rem;
   line-height: 1.85;
 }
 
-/* CONTENT / TABLE OF CONTENTS */
+/* TABLE OF CONTENTS */
 
 .toc-wrapper {
   max-width: 980px;
@@ -201,14 +195,14 @@ a {
 }
 
 .toc-wrapper > h2 {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .toc-wrapper > .lead {
-  margin: 0 0 36px;
+  margin: 0 0 34px;
   max-width: 760px;
   color: #513827;
-  font-size: 1.14rem;
+  font-size: 1.08rem;
   line-height: 1.85;
 }
 
@@ -216,54 +210,50 @@ a {
   max-width: 980px;
   margin: 0 auto;
   overflow: hidden;
-  background: rgba(255, 250, 241, 0.95);
+  background: rgba(255, 250, 241, 0.96);
   border: 1px solid var(--border);
-  border-radius: 22px;
-  box-shadow: 0 24px 64px rgba(62, 36, 19, 0.14);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(62, 36, 19, 0.13);
 }
 
 .chapter-toggle {
   width: 100%;
-  padding: 32px 40px;
+  padding: 30px 38px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background:
-    linear-gradient(135deg, rgba(120, 73, 44, 0.98), rgba(78, 42, 24, 0.98));
+  background: linear-gradient(135deg, #794a2d, #4d2a18);
   color: #fff8eb;
   border: 0;
   cursor: pointer;
   text-align: left;
+  font-family: "Noto Serif", Georgia, "Times New Roman", serif;
 }
 
 .chapter-toggle:hover {
-  background:
-    linear-gradient(135deg, rgba(129, 80, 49, 0.98), rgba(86, 48, 29, 0.98));
+  background: linear-gradient(135deg, #825231, #57301c);
 }
 
 .chapter-title {
   display: block;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(2.25rem, 4vw, 3.45rem);
+  font-size: clamp(1.9rem, 3.4vw, 3rem);
   font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.025em;
+  line-height: 1.16;
+  letter-spacing: -0.015em;
 }
 
 .chapter-subtitle {
-  margin-top: 10px;
+  margin-top: 9px;
   display: block;
   color: #f2d08c;
-  font-family: "Noto Serif", Georgia, serif;
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
 .chevron {
-  font-family: "Noto Serif", Georgia, serif;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 700;
   color: #fff1d2;
 }
@@ -273,11 +263,11 @@ a {
 }
 
 .lesson-link {
-  min-height: 106px;
-  padding: 25px 40px 25px 34px;
+  min-height: 102px;
+  padding: 24px 38px 24px 32px;
   display: grid;
-  grid-template-columns: 54px 1fr 34px;
-  gap: 24px;
+  grid-template-columns: 52px 1fr 34px;
+  gap: 22px;
   align-items: center;
   border-top: 1px solid var(--border);
   transition:
@@ -291,68 +281,64 @@ a {
 }
 
 .lesson-number {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   display: grid;
   place-items: center;
   border-radius: 999px;
   background: var(--gold-soft);
   color: #54301b;
-  font-family: "Noto Serif", Georgia, serif;
   font-weight: 700;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
 }
 
 .lesson-title {
   display: block;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 1.65rem;
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: -0.01em;
   color: #1f1009;
+  font-size: 1.34rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 .lesson-meta {
   display: block;
-  margin-top: 5px;
+  margin-top: 4px;
   color: var(--muted);
-  font-size: 0.96rem;
+  font-size: 0.94rem;
 }
 
 .arrow {
   color: #9b642e;
-  font-size: 1.45rem;
+  font-size: 1.36rem;
 }
 
 /* CONTENT PAGES */
 
 .content-page {
   max-width: 900px;
-  margin: 80px auto;
+  margin: 78px auto;
   padding: 0 28px;
 }
 
 .content-page article {
-  background: rgba(255, 250, 241, 0.94);
+  background: rgba(255, 250, 241, 0.95);
   border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: clamp(38px, 6vw, 70px);
-  box-shadow: 0 24px 64px rgba(62, 36, 19, 0.14);
+  border-radius: 20px;
+  padding: clamp(38px, 6vw, 68px);
+  box-shadow: 0 24px 60px rgba(62, 36, 19, 0.13);
 }
 
 .content-page h1 {
   margin: 0 0 34px;
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(3.2rem, 6vw, 5.4rem);
-  line-height: 0.96;
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  line-height: 1.08;
   font-weight: 700;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
 }
 
 .content-page p {
   margin: 0 0 24px;
-  font-size: 1.08rem;
+  font-size: 1.06rem;
   line-height: 1.9;
 }
 
@@ -378,7 +364,7 @@ a {
   }
 
   .brand {
-    font-size: 1.25rem;
+    font-size: 1.16rem;
   }
 
   .nav-links {
@@ -387,45 +373,45 @@ a {
   }
 
   .hero {
-    min-height: 440px;
-    padding: 70px 20px;
+    min-height: 430px;
+    padding: 66px 20px;
   }
 
   .hero h1 {
-    font-size: clamp(3.5rem, 16vw, 5.6rem);
+    font-size: clamp(3.2rem, 15vw, 5.3rem);
   }
 
   .hero p {
-    font-size: 1.14rem;
+    font-size: 1.08rem;
   }
 
   .section {
-    padding: 56px 18px;
+    padding: 54px 18px;
   }
 
   .paper {
-    padding: 34px 24px;
+    padding: 32px 22px;
     border-radius: 18px;
   }
 
   .paper p,
   .paper .lead {
-    font-size: 1.02rem;
+    font-size: 1rem;
   }
 
   .note {
-    font-size: 1rem;
+    font-size: 0.98rem;
     padding: 20px 22px;
   }
 
   .chapter-toggle {
-    padding: 28px 24px;
+    padding: 26px 22px;
   }
 
   .lesson-link {
     grid-template-columns: 42px 1fr 24px;
     gap: 16px;
-    padding: 22px 20px;
+    padding: 21px 18px;
   }
 
   .lesson-number {
@@ -434,10 +420,10 @@ a {
   }
 
   .lesson-title {
-    font-size: 1.35rem;
+    font-size: 1.16rem;
   }
 
   .lesson-meta {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
   }
 }
