@@ -533,3 +533,126 @@ body > main:not(:has(.section)) a[href*="index"]:hover {
     line-height: 1.85 !important;
   }
 }
+/* ===== CLEAN READING PAGE LAYOUT - FINAL FIX ===== */
+
+/* Trang nội dung con */
+body > h1 {
+  max-width: 860px;
+  margin: 72px auto 18px !important;
+  padding: 0 28px;
+  color: #24120b;
+  font-size: clamp(2.6rem, 4.8vw, 4.2rem) !important;
+  line-height: 1.15 !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Link quay về nếu đang nằm ngoài main */
+body > a,
+body > .back-link {
+  display: block;
+  max-width: 860px;
+  margin: 0 auto 28px !important;
+  padding: 0 28px;
+  color: #72553d;
+  font-size: 1rem;
+}
+
+/* Khung chính của trang con */
+body > main {
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  padding: 0 28px 96px !important;
+}
+
+/* Nếu trong main có h1 thì xử lý luôn */
+body > main > h1 {
+  margin: 0 0 28px !important;
+  color: #24120b;
+  font-size: clamp(2.6rem, 4.8vw, 4.2rem) !important;
+  line-height: 1.15 !important;
+}
+
+/* Link quay về trong main */
+body > main > a,
+body > main .back-link {
+  display: inline-block;
+  margin: 0 0 28px !important;
+  color: #72553d;
+  font-size: 1rem;
+}
+
+/* Card bài đọc */
+body > main > article,
+.content-page article {
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  padding: 52px 60px !important;
+  background: rgba(255, 250, 241, 0.96) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 22px 58px rgba(62, 36, 19, 0.12) !important;
+}
+
+/* Nếu bài không có article, ép các đoạn p gọn lại */
+body > main > p {
+  max-width: 760px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Chữ nội dung */
+body > main p,
+.content-page p {
+  color: #2b1a11 !important;
+  font-size: 1.06rem !important;
+  line-height: 1.95 !important;
+  margin: 0 0 24px !important;
+  text-align: left !important;
+}
+
+/* Link hover */
+body > a:hover,
+body > .back-link:hover,
+body > main > a:hover,
+body > main .back-link:hover {
+  color: #24120b;
+  text-decoration: underline;
+}
+
+/* Xóa khoảng cách kỳ quặc nếu content-page đang bị khai báo cũ */
+.content-page {
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  padding: 72px 28px 96px !important;
+}
+
+/* MOBILE */
+@media (max-width: 720px) {
+  body > h1 {
+    margin-top: 42px !important;
+    padding: 0 18px;
+    font-size: 2.2rem !important;
+  }
+
+  body > a,
+  body > .back-link {
+    padding: 0 18px;
+  }
+
+  body > main {
+    padding: 0 18px 72px !important;
+  }
+
+  body > main > article,
+  .content-page article {
+    padding: 30px 22px !important;
+    border-radius: 16px !important;
+  }
+
+  body > main p,
+  .content-page p {
+    font-size: 1rem !important;
+    line-height: 1.85 !important;
+  }
+}
